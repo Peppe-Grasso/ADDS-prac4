@@ -1,22 +1,28 @@
 #include "EfficientTruckLoads.h"
 
-#include <array>
+#include <map>
 
 
 
 EfficientTruckLoads::EfficientTruckLoads() {
- 
 }
 
-int TruckLoads::numTrucks(int numCrates, int loadSize) {
+int EfficientTruckLoads::numTrucks(int numCrates, int loadSize) {
+
+	if (lookup.count(numCrates)) {return lookup.at(numCrates); }
+
         if (numCrates <= loadSize) { 
-		lookup.push_back(1);
-		return lookup.at(1); 
+		lookup.insert(std::pair<int,int>(numCrates,1));
+		return lookup.at(numCrates); 
 	}
 
-        if (numCrates % 2 == 0)
-                return numTrucks(numCrates/2,loadSize) + numTrucks(numCrates/2,loadSize);
-        return numTrucks(numCrates/2,loadSize) + numTrucks(numCrates/2 + 1,loadSize);
+        if (numCrates % 2 == 0) {
+		lookup.insert(std::pair<int,int>(numCrates,(numTrucks(numCrates/2,loadSize)*2)));
+                return lookup.at(numCrates);
+	}
+        
+	lookup.insert(std::pair<int,int>(numCrates,(numTrucks(numCrates/2,loadSize) + numTrucks(numCrates/2 + 1,loadSize))));
+	return lookup.at(numCrates);
 
 }
 

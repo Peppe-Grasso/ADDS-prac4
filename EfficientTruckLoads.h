@@ -1,14 +1,14 @@
 #ifndef EFFICIENTTRUCKLOADS
 #define EFFICIENTTRUCKLOADS
 
-#include <array>
+#include <map>
 
 class EfficientTruckLoads {
         public:
                 EfficientTruckLoads();
                 int numTrucks(int numCrates, int loadSize);
         private:
-                std::array<int> lookup;
+                std::map<int,int> lookup;
 };
 
 
