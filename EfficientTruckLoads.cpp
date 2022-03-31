@@ -1,13 +1,13 @@
-#include "EfficientTruckLoads.h"
+#include "EfficientTruckloads.h"
 
 #include <map>
 
 
 
-EfficientTruckLoads::EfficientTruckLoads() {
+EfficientTruckloads::EfficientTruckloads() {
 }
 
-int EfficientTruckLoads::numTrucks(int numCrates, int loadSize) {
+int EfficientTruckloads::numTrucks(int numCrates, int loadSize) {
 
 	if (lookup.count(numCrates)) {return lookup.at(numCrates); }
 

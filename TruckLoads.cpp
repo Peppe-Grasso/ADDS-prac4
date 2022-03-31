@@ -1,10 +1,10 @@
-#include "TruckLoads.h"
+#include "Truckloads.h"
 
-TruckLoads::TruckLoads() {
+Truckloads::Truckloads() {
 	nTrucks = 0;
 }
 
-int TruckLoads::numTrucks(int numCrates, int loadSize) {
+int Truckloads::numTrucks(int numCrates, int loadSize) {
 	if (numCrates <= loadSize) { return 1; }
 	
 	if (numCrates % 2 == 0)

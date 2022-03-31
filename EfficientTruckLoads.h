@@ -3,9 +3,9 @@
 
 #include <map>
 
-class EfficientTruckLoads {
+class EfficientTruckloads {
         public:
-                EfficientTruckLoads();
+                EfficientTruckloads();
                 int numTrucks(int numCrates, int loadSize);
         private:
                 std::map<int,int> lookup;

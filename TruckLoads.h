@@ -2,9 +2,9 @@
 #define TRUCKLOADS
 
 
-class TruckLoads {
+class Truckloads {
 	public:
-		TruckLoads();
+		Truckloads();
 		int numTrucks(int numCrates, int loadSize);
 	private:
 		int nTrucks;
