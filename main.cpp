@@ -1,6 +1,6 @@
 #include "Reverse.h"
-#include "TruckLoads.h"
-#include "EfficientTruckLoads.h"
+#include "Truckloads.h"
+#include "EfficientTruckloads.h"
 #include <string>
 #include <iostream>
 
@@ -9,7 +9,7 @@ int main(void) {
 	std::cout << r.reverseDigit(12345);
 	std::cout << r.reverseString("hello") << std::endl;
 
-	EfficientTruckLoads t;
+	EfficientTruckloads t;
 	std::cout << t.numTrucks(14,3); 
 	
 }
